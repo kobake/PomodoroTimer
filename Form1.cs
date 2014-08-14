@@ -96,7 +96,7 @@ namespace PomodoroTimer
 			}
 			else if (m_mode == "Short break")
 			{
-				m_modeTime = new TimeSpan(0, 5, 0);
+				m_modeTime = new TimeSpan(0, 0, 2);
 			}
 			else if (m_mode == "Long break")
 			{
@@ -115,13 +115,35 @@ namespace PomodoroTimer
 		// -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- //
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+			// Time forwarding
 			if (m_state == 1)
 			{
 				TimeSpan elapsed = DateTime.Now - m_start;
 				m_rest = m_modeTime - elapsed;
+				// Got zero
+				if (m_rest.Ticks <= 0)
+				{
+					FlashUtil.FlashWindowEx(this);
+					m_state = 2;
+				}
 			}
-			label2.Text = (m_rest + new TimeSpan(0, 0, 0, 0, 950)).ToString(@"hh\:mm\:ss"); // round up
+
+			// Zero
+			if (m_state == 2)
+			{
+				label2.Text = "Beep!";
+			}
+
+			// Not zero
+			else
+			{
+				label2.Text = (m_rest + new TimeSpan(0, 0, 0, 0, 950)).ToString(@"hh\:mm\:ss"); // round up
+			}
+
+			// Window title
 			this.Text = label2.Text + " - PomodoroTimer";
+
+			// Button status
 			btnStart.Enabled = (m_state == 0);
 			btnStop.Enabled = (m_state == 1);
 		}
