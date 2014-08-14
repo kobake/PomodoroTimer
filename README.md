@@ -19,6 +19,12 @@ Screenshot
 ![screenshot](screenshot.png)
 
 
+Thanks
+------
+### Icon
+[Tomato Icon | Food & Drinks Iconset | GraphicLoads](http://www.iconarchive.com/show/food-drink-icons-by-graphicloads/tomato-icon.html)
+
+
 License
 -------
     The MIT License (MIT)

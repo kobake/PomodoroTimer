@@ -29,11 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.ファイルFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.showInTaskTrayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.whatsPomodoroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,7 +57,6 @@
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ファイルFToolStripMenuItem,
-            this.windowToolStripMenuItem,
             this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -78,24 +76,9 @@
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-			// 
-			// windowToolStripMenuItem
-			// 
-			this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showInTaskTrayToolStripMenuItem});
-			this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
-			this.windowToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-			this.windowToolStripMenuItem.Text = "&Window";
-			// 
-			// showInTaskTrayToolStripMenuItem
-			// 
-			this.showInTaskTrayToolStripMenuItem.Name = "showInTaskTrayToolStripMenuItem";
-			this.showInTaskTrayToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-			this.showInTaskTrayToolStripMenuItem.Text = "Iconized in &Task tray";
-			this.showInTaskTrayToolStripMenuItem.Click += new System.EventHandler(this.showInTaskTrayToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -272,6 +255,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
 			this.Name = "Form1";
@@ -300,8 +284,6 @@
 		private System.Windows.Forms.Button btnShortBreak;
 		private System.Windows.Forms.Button btnReset;
 		private System.Windows.Forms.Button btnStart;
-		private System.Windows.Forms.ToolStripMenuItem windowToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem showInTaskTrayToolStripMenuItem;
 		private System.Windows.Forms.Button btnPomodoro;
 		private System.Windows.Forms.Button btnStop;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

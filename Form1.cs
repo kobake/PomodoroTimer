@@ -173,10 +173,5 @@ namespace PomodoroTimer
 			dt = dt.AddHours(TimeZone.CurrentTimeZone.GetUtcOffset(dt).Hours);
 			return dt;
 		}
-
-		private void showInTaskTrayToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }
