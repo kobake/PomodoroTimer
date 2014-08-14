@@ -96,7 +96,7 @@ namespace PomodoroTimer
 			}
 			else if (m_mode == "Short break")
 			{
-				m_modeTime = new TimeSpan(0, 0, 2);
+				m_modeTime = new TimeSpan(0, 5, 0);
 			}
 			else if (m_mode == "Long break")
 			{
