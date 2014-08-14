@@ -78,8 +78,9 @@
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Alt+F4";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.exitToolStripMenuItem.Text = "E&xit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// windowToolStripMenuItem
 			// 
@@ -94,6 +95,7 @@
 			this.showInTaskTrayToolStripMenuItem.Name = "showInTaskTrayToolStripMenuItem";
 			this.showInTaskTrayToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
 			this.showInTaskTrayToolStripMenuItem.Text = "Iconized in &Task tray";
+			this.showInTaskTrayToolStripMenuItem.Click += new System.EventHandler(this.showInTaskTrayToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -110,6 +112,7 @@
 			this.whatsPomodoroToolStripMenuItem.Name = "whatsPomodoroToolStripMenuItem";
 			this.whatsPomodoroToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
 			this.whatsPomodoroToolStripMenuItem.Text = "What\'s &Pomodoro";
+			this.whatsPomodoroToolStripMenuItem.Click += new System.EventHandler(this.whatsPomodoroToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
@@ -121,6 +124,7 @@
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
 			this.aboutToolStripMenuItem.Text = "&About";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
 			// tableLayoutPanel1
 			// 
